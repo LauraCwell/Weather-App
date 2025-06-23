@@ -1,0 +1,72 @@
+body {
+  font-family: "Oswald", sans-serif;
+  background: #f9f7fe;
+}
+header {
+  padding-bottom: 30px;
+}
+
+h1 {
+  color: #272142;
+  font-size: 42px;
+}
+strong {
+  color: #f65282;
+}
+footer {
+  color: #adabb7;
+}
+a {
+  color: #9e7cf4;
+}
+.oswald-uniquifier {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.container {
+  display: block;
+  border: none;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 75px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 7px;
+}
+.city-form {
+  position: relative;
+  top: 15px;
+  left: 40px;
+}
+.city-search {
+  width: 350px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background: #f9f7fe;
+  font-size: 14px;
+}
+.search-bar {
+  width: 85px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #885df1;
+  color: #ffffff;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.current-temp {
+  font-size: 60px;
+  color: #272142;
+  padding-top: 20px;
+}
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+}
+.weather-stats {
+  color: #adabb7;
+}
