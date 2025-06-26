@@ -61,10 +61,22 @@ a {
   font-size: 14px;
   margin-left: 10px;
 }
-.current-temp {
+.temperature-container {
+  display: flex;
+}
+.weather-app-icon {
+  font-size: 44px;
+  margin-top: 30px;
+}
+.current-temperature {
   font-size: 60px;
   color: #272142;
   padding-top: 20px;
+  margin-left: 10px;
+}
+.weather-app-unit {
+  margin-top: 22px;
+  font-size: 28px;
 }
 .current-weather {
   display: flex;

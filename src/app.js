@@ -30,33 +30,30 @@ function updateDateTime() {
 }
 
 function displayTemperature(response) {
+  let temperatureDisplay = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
-  let temperatureDisplay = document.querySelector(
-    "#current-temperature-display"
-  );
-  temperatureDisplay.innerHTML = `☀️ ${temperature}°C`;
+  let cityDisplay = document.querySelector("#current-city");
+
+  cityDisplay.innerHTML = response.data.city;
+  temperatureDisplay.innerHTML = temperature;
+}
+
+function searchCity(city) {
+  let apiKey = "o328b4b5c85378c045400at05641afca";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function handleSearch(event) {
   event.preventDefault();
 
   let cityInput = document.querySelector("#city-input");
-  let city = cityInput.value.trim();
 
-  if (city === "") return;
-
-  // Update city name on page
-  let cityDisplay = document.querySelector("#current-city");
-  cityDisplay.innerHTML = city.charAt(0).toUpperCase() + city.slice(1);
-
-  // Call API
-  let apiKey = "o328b4b5c85378c045400at05641afca";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayTemperature);
+  searchCity(cityInput.value);
 }
 
-document.querySelector("#city-form").addEventListener("submit", handleSearch);
+let cityFormElement = document.querySelector("#city-form");
+cityFormElement.addEventListener("submit", handleSearch);
 
-// Show initial date/time
 updateDateTime();
+searchCity("London");
