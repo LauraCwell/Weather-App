@@ -25,23 +25,29 @@ function formatDate(date) {
 
 function updateDateTime() {
   let currentDate = new Date();
-  let displayCurrentDate = document.querySelector("#day-and-time");
+  let displayCurrentDate = document.querySelector("#time");
   displayCurrentDate.innerHTML = formatDate(currentDate);
 }
 
-function displayTemperature(response) {
+function displayWeather(response) {
   let temperatureDisplay = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
   let cityDisplay = document.querySelector("#current-city");
+  let descriptionElement = document.querySelector("#weather-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
 
   cityDisplay.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureDisplay.innerHTML = temperature;
 }
 
 function searchCity(city) {
   let apiKey = "o328b4b5c85378c045400at05641afca";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function handleSearch(event) {
