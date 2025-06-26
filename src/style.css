@@ -15,6 +15,9 @@ strong {
 }
 footer {
   color: #adabb7;
+  border-top: 1px solid #f9f7fe;
+  font-size: 14px;
+  text-align: center;
 }
 a {
   color: #9e7cf4;
