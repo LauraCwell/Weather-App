@@ -66,8 +66,9 @@ a {
   display: flex;
 }
 .weather-icon {
-  width: 88px;
-  height: 88px;
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
 }
 .current-temperature {
   font-size: 80px;

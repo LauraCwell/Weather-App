@@ -36,12 +36,14 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
 
   cityDisplay.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureDisplay.innerHTML = temperature;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 }
 
 function searchCity(city) {
