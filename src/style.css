@@ -1,6 +1,7 @@
 body {
   font-family: "Oswald", sans-serif;
   background: #f9f7fe;
+  font-size: 16px;
 }
 header {
   padding-bottom: 30px;
@@ -22,6 +23,17 @@ footer {
 a {
   color: #9e7cf4;
 }
+@media (max-width: 768px) {
+  .weather-card {
+    flex-direction: column;
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .forecast {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .oswald-uniquifier {
   font-family: "Oswald", sans-serif;
@@ -30,9 +42,11 @@ a {
   font-style: normal;
 }
 .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: none;
-  width: 600px;
+  width: 65%;
+  max-width: 600px;
   margin: 0 auto;
   margin-top: 75px;
   padding: 20px;
@@ -45,7 +59,7 @@ a {
   left: 40px;
 }
 .city-search {
-  width: 350px;
+  width: 65%;
   padding: 15px;
   border-radius: 5px;
   border: none;
@@ -53,7 +67,7 @@ a {
   font-size: 14px;
 }
 .search-bar {
-  width: 85px;
+  width: 15%;
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -66,8 +80,8 @@ a {
   display: flex;
 }
 .weather-icon {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  height: auto;
   margin-top: 10px;
 }
 .current-temperature {
