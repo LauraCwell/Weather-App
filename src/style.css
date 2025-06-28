@@ -23,17 +23,6 @@ footer {
 a {
   color: #9e7cf4;
 }
-@media (max-width: 768px) {
-  .weather-card {
-    flex-direction: column;
-    font-size: 0.9rem;
-    padding: 1rem;
-  }
-
-  .forecast {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 .oswald-uniquifier {
   font-family: "Oswald", sans-serif;
@@ -59,7 +48,7 @@ a {
   left: 40px;
 }
 .city-search {
-  width: 65%;
+  width: 75%;
   padding: 15px;
   border-radius: 5px;
   border: none;
