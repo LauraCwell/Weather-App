@@ -69,9 +69,8 @@ a {
   display: flex;
 }
 .weather-icon {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
+  width: 160px;
+  height: 160px;
 }
 .current-temperature {
   font-size: 80px;
@@ -105,8 +104,8 @@ a {
   margin-bottom: 10px;
 }
 .weather-forecast-icon {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   display: flex;
   margin: 0 auto;
 }
