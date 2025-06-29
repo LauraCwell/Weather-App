@@ -122,7 +122,7 @@ a {
 }
 @media (max-width: 500px) {
   .container {
-    width: 90%;
+    width: 80%;
     margin-top: 30px;
   }
 
@@ -136,7 +136,7 @@ a {
   }
 
   .city-search {
-    width: 30%;
+    width: 60%;
     margin-left: 0;
   }
   .search-bar {
@@ -167,8 +167,12 @@ a {
   }
 
   .weather-icon {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+  }
+  .weather-forecast {
+    margin-left: 0;
+    display: flex;
   }
   .weather-forecast-date {
     font-size: 12px;
