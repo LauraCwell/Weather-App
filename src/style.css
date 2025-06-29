@@ -136,11 +136,11 @@ a {
   }
 
   .city-search {
-    width: 80%;
+    width: 10%;
     margin-left: 0;
   }
   .search-bar {
-    width: 40%;
+    width: 30%;
     margin-left: 0;
   }
 
@@ -151,11 +151,13 @@ a {
 
   .temperature-container {
     justify-content: center;
+    display: flex;
+    max-width: fit-content;
   }
 
   .current-temperature {
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 64px;
+    line-height: 72px;
     text-align: center;
   }
 
@@ -165,8 +167,8 @@ a {
   }
 
   .weather-icon {
-    width: 38px;
-    height: 38px;
+    width: 20px;
+    height: 20px;
   }
   .weather-forecast-date {
     font-size: 12px;
